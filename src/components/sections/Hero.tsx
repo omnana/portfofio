@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
           <div className="space-y-4">
             <p className="text-primary font-bold tracking-[0.3em] text-sm uppercase">Available for New Projects</p>
             <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] tracking-tighter">
-              ALEX VANCE — <span className="text-primary/90">GAME DEVELOPER</span> &amp; DESIGNER
+              YOUNG — <span className="text-primary/90">GAME DEVELOPER</span> &amp; DESIGNER
             </h1>
             <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
               Crafting immersive worlds, high-performance game mechanics, and unforgettable interactive experiences using Unreal Engine and C++.

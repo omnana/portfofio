@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import avatar from '../assets/images/avatar.jpg'
 
 export default function About() {
   return (
@@ -24,8 +25,7 @@ export default function About() {
                 <div
                   className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                   style={{
-                    backgroundImage:
-                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCs1aDXCk4rzDb6nNxhiai8r5XNfEboRirf0qbJP6ulKxtOiRU1ek0ZeYzVePMdriemBGoE2cezq4XpvkKXX-l0booO8OcMUrB1jB1U0u2KvHnB0FMEwM_n3xurRSyT9GW6FKZPSqdvpcngpqNTrUi_f-dIUk2VJfrKzcKmpHpQifys60h9Bf1tEaQYJc7Ws9tjEJ5cawTbORgv7-z-WmtFdNPhzKPYyOVKSPFiFYwuaiOxfT9QgVDWXcLbYtdpQmEqlf8CwhFg2w')",
+                    backgroundImage: `url(${avatar})`,
                   }}
                 ></div>
 
