@@ -1,15 +1,27 @@
-/* 全局样式 */
+/* Global styles */
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   
   body {
-    @apply bg-gray-50 text-gray-900 antialiased;
+    @apply bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased;
+    font-family: 'Space Grotesk', sans-serif;
   }
 }
 
 @layer components {
+  /* Custom styles from original design */
+  .hero-gradient {
+    background: linear-gradient(to bottom, rgba(16, 22, 34, 0.4) 0%, rgba(16, 22, 34, 0.8) 70%, rgba(16, 22, 34, 1) 100%);
+  }
+  
+  .glass-nav {
+    background: rgba(16, 22, 34, 0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
   /* 按钮样式 */
   .btn-primary {
     @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
