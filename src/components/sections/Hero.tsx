@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const Hero: React.FC = () => {
   return (
@@ -34,9 +35,12 @@ const Hero: React.FC = () => {
               <span>View My Work</span>
               <span className="material-symbols-outlined text-xl">arrow_forward</span>
             </button>
-            <button className="w-full sm:w-auto bg-white/5 border border-white/10 text-white text-base font-bold px-10 py-4 rounded-xl transition-all hover:bg-white/10 backdrop-blur-sm">
+            <Link
+              className="w-full sm:w-auto bg-white/5 border border-white/10 text-white text-base font-bold px-10 py-4 rounded-xl transition-all hover:bg-white/10 backdrop-blur-sm text-center"
+              to="/about"
+            >
               About Me
-            </button>
+            </Link>
           </div>
         </div>
       </div>

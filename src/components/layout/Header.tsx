@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom'
 
 const Header: React.FC = () => {
   return (
@@ -16,15 +17,46 @@ const Header: React.FC = () => {
           <h2 className="text-xl font-bold tracking-tight text-white uppercase">GD Portfolio</h2>
         </div>
         <nav className="hidden md:flex items-center gap-10">
-          <a className="text-sm font-medium hover:text-primary transition-colors text-white" href="#">Home</a>
-          <a className="text-sm font-medium hover:text-primary transition-colors text-white/70" href="#projects">Projects</a>
-          <a className="text-sm font-medium hover:text-primary transition-colors text-white/70" href="#about">About</a>
-          <a className="text-sm font-medium hover:text-primary transition-colors text-white/70" href="#contact">Contact</a>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? 'text-sm font-medium transition-colors text-white underline decoration-primary underline-offset-4'
+                : 'text-sm font-medium hover:text-primary transition-colors text-white/70'
+            }
+            to="/"
+          >
+            Home
+          </NavLink>
+          <a
+            className="text-sm font-medium hover:text-primary transition-colors text-white/70"
+            href="/#projects"
+          >
+            Projects
+          </a>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? 'text-sm font-medium transition-colors text-white underline decoration-primary underline-offset-4'
+                : 'text-sm font-medium hover:text-primary transition-colors text-white/70'
+            }
+            to="/about"
+          >
+            About
+          </NavLink>
+          <a
+            className="text-sm font-medium hover:text-primary transition-colors text-white/70"
+            href="/#contact"
+          >
+            Contact
+          </a>
         </nav>
         <div className="flex items-center gap-4">
-          <button className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/25">
+          <Link
+            className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/25"
+            to="/#contact"
+          >
             Hire Me
-          </button>
+          </Link>
         </div>
       </div>
     </header>
