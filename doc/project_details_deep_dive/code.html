@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Details Deep Dive - Nebula Drift</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b6cee",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+        .glow-accent {
+            box-shadow: 0 0 20px rgba(43, 108, 238, 0.2);
+        }
+        .code-syntax {
+            font-family: monospace;
+            background: #0a0e17;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md px-6 md:px-20 lg:px-40 py-4">
+<div class="flex items-center justify-between max-w-[1200px] mx-auto">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">rocket_launch</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Portfolio</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Resume</a>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all glow-accent">
+                        Let's Talk
+                    </button>
+</nav>
+</div>
+</header>
+<main class="flex-1 w-full max-w-[1200px] mx-auto px-6 md:px-10 py-8">
+<!-- Hero Section -->
+<section class="mb-12">
+<div class="relative group overflow-hidden rounded-xl bg-slate-900 aspect-video md:aspect-[21/9] flex items-center justify-center border border-white/5">
+<div class="absolute inset-0 bg-cover bg-center opacity-80" data-alt="Cinematic gameplay still showing neon spaceships racing through a nebula" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGQSMZmsMgTJ1cGFIlhq_u7tdcpPSZTHqlQXbZOWn0QApFSKZsc8dDY7c-ipUxUA5ZoJ1ffVbKVFF0foi9VIo_ssOZPHFvP2IcDtswTmZpW9Y7TF-o2kyJH8fuDmETYfd9em9KNZsQTpu7NqMqCN4ymAu6K-tIOJBne5cZrDYFAE4plK0sNNGrZ4LEskIxC2EU85hc-rXrxnCWA3U8YNtzlMFOKLONRvnItZ1NH1fY2Ae92pw6uLSWB3pyMc103ZbGS9D0NPiuog");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
+<div class="relative z-10 text-center">
+<button class="bg-white/10 hover:bg-white/20 backdrop-blur-md p-6 rounded-full border border-white/20 transition-transform hover:scale-110">
+<span class="material-symbols-outlined text-5xl text-white">play_arrow</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Project Overview & Metadata Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
+<!-- Left Column: Overview -->
+<div class="lg:col-span-2 space-y-6">
+<div class="space-y-4">
+<h1 class="text-5xl font-black tracking-tighter text-white">Nebula Drift</h1>
+<p class="text-xl text-slate-400 leading-relaxed">
+                            A high-octane sci-fi racer where physics meet the psychedelic. Pilot experimental vessels through a collapsing star system, utilizing gravity wells and stellar winds to gain an edge over your rivals. Built from the ground up for high-performance PC hardware.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all glow-accent">
+<span class="material-symbols-outlined">sports_esports</span>
+                            Play Game
+                        </button>
+<button class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all">
+<span class="material-symbols-outlined">folder_zip</span>
+                            Project Brief
+                        </button>
+</div>
+</div>
+<!-- Right Column: Metadata -->
+<div class="bg-slate-900/50 border border-white/10 rounded-xl p-8 space-y-8 h-fit">
+<div class="space-y-2">
+<p class="text-xs uppercase tracking-widest text-primary font-bold">My Role</p>
+<p class="text-lg font-medium text-white">Lead Systems Programmer</p>
+</div>
+<div class="space-y-3">
+<p class="text-xs uppercase tracking-widest text-primary font-bold">Tools Used</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-slate-800 text-white text-xs px-3 py-1.5 rounded-lg border border-white/5">Unity</span>
+<span class="bg-slate-800 text-white text-xs px-3 py-1.5 rounded-lg border border-white/5">HLSL Shaders</span>
+<span class="bg-slate-800 text-white text-xs px-3 py-1.5 rounded-lg border border-white/5">Maya</span>
+<span class="bg-slate-800 text-white text-xs px-3 py-1.5 rounded-lg border border-white/5">C#</span>
+<span class="bg-slate-800 text-white text-xs px-3 py-1.5 rounded-lg border border-white/5">Perforce</span>
+</div>
+</div>
+<div class="space-y-4">
+<p class="text-xs uppercase tracking-widest text-primary font-bold">Links</p>
+<div class="grid grid-cols-1 gap-3">
+<a class="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">code</span>
+<span>GitHub Repository</span>
+</a>
+<a class="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">shopping_cart</span>
+<span>Steam Store Page</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Technical Breakdown -->
+<section class="space-y-16 mb-20">
+<div class="border-l-4 border-primary pl-6">
+<h2 class="text-3xl font-bold text-white tracking-tight">Technical Breakdown</h2>
+<p class="text-slate-400 mt-2">Deep dive into the core architecture and visual engineering.</p>
+</div>
+<!-- Breakdown Item 1 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+<div class="space-y-4">
+<h3 class="text-2xl font-bold text-white flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">blur_on</span>
+                            Dynamic Nebula Shader
+                        </h3>
+<p class="text-slate-400 leading-relaxed">
+                            The core challenge was rendering dense nebulae that could be flown through without significant performance drops. I implemented a custom ray-marching volume shader using HLSL that leverages local space signed distance fields (SDFs).
+                        </p>
+<div class="code-syntax p-6 rounded-lg border border-white/10 text-xs overflow-x-auto text-blue-300">
+<pre><code>// Fragment shader snippet for Nebula density
+float4 frag(v2f i) : SV_Target {
+    float3 rayPos = i.worldPos;
+    float3 rayDir = normalize(rayPos - _WorldSpaceCameraPos);
+    float density = 0;
+    for(int j=0; j&lt;MAX_STEPS; j++) {
+        float d = map(rayPos);
+        if(d &lt; 0.01) {
+            density += exp(-j * _StepSize);
+        }
+        rayPos += rayDir * _StepSize;
+    }
+    return float4(_NebulaColor.rgb, density);
+}</code></pre>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden border border-white/10 bg-slate-900 h-[400px]">
+<div class="w-full h-full bg-cover bg-center" data-alt="Abstract colorful gas clouds in deep space representing a shader effect" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCctX2P8OBBHzpjVQXtI3ryWGKLOnBZTKwsNegXKwXvz4hKHdFyVTCem8fxoJLvwU5w4cFVxJLM1rDKZwZyLHnWXVLfhhhoViG4vY69cDTQ5Xjkp_gtB4RW74Asz8mF5AmvqmAiikqBsk4XVZ2jdPUn9vpI8yqmmo8ldRz1HqKSI2AslxXcQdhvC_mfoNds_cbidBC9Ccke54H-St2yly_b6yBo-51VDrRA-qY8OPoPFjnzEL8QrnCwHBql1mjIr2jVxRWilqLj6A");'>
+</div>
+</div>
+</div>
+<!-- Breakdown Item 2 -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+<div class="order-2 lg:order-1 rounded-xl overflow-hidden border border-white/10 bg-slate-900 h-[400px]">
+<div class="w-full h-full bg-cover bg-center" data-alt="Technical rendering of a futuristic spaceship cockpit interior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1D6abH3ibTNAolgFYTE8unhk252d47Dx87mzYx-ekU2uaVeTurEeV9ClC6KD_UdLu7gd98AVqWhgmAF1AoWHCu0zDernlzTLmacRFm_vB0TzodkLBDPKkwY3iH7hU-Jkxqo9zBQKA5p3z5Rn11Cf8d5ZI18g7aow8E5VLOoMbMZSZ_5OU9WcJSrXWoWHNvUtO7J3L1_g6-7osYJCpI54LHMzeCh6K2sbyVd-knNn3V8JmXh2a5mCX5juk1zT0YMY0VsWnXcbqog");'>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-4">
+<h3 class="text-2xl font-bold text-white flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">settings_input_antenna</span>
+                            Vector-Based Handling
+                        </h3>
+<p class="text-slate-400 leading-relaxed">
+                            To simulate the feel of zero-G racing, the movement system relies on a bespoke Newtonian physics wrapper. Instead of standard Unity physics, I calculated thrust vectors and rotational inertia manually to ensure frame-perfect response times.
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-slate-300">Predictive collision detection for 500km/h speeds</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-slate-300">Asynchronous physics step for networking stability</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Key Challenges -->
+<section class="bg-primary/5 border border-primary/20 rounded-2xl p-10 lg:p-16 mb-20">
+<div class="max-w-[800px] mx-auto space-y-6">
+<div class="flex items-center gap-4">
+<div class="p-3 bg-primary rounded-xl">
+<span class="material-symbols-outlined text-white">psychology</span>
+</div>
+<h2 class="text-3xl font-bold text-white">Key Challenges &amp; Retrospective</h2>
+</div>
+<div class="space-y-4 text-lg text-slate-300 leading-relaxed">
+<p>
+                            Developing Nebula Drift presented a unique hurdle: balancing visual fidelity with the extreme speeds required for the gameplay. Early builds suffered from motion sickness issues due to the way screen-space motion blur interacted with the procedural nebula volumes.
+                        </p>
+<p>
+                            The solution involved decoupling the player's cockpit rendering from the external world blur using a dual-camera setup with specific layer masking. This kept the UI and ship interior crisp while allowing the outer space environments to streak dynamically.
+                        </p>
+<p>
+                            Looking back, the project pushed my understanding of GPU optimization and custom pipeline development in Unity, ultimately resulting in a game that maintains a steady 144 FPS even in the densest asteroid fields.
+                        </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-white/5 py-12 px-6 bg-background-dark">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">rocket_launch</span>
+<span class="font-bold text-white">Nebula Drift Deep Dive</span>
+</div>
+<div class="flex gap-8 text-sm text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">ArtStation</a>
+<a class="hover:text-primary transition-colors" href="#">Twitter</a>
+</div>
+<p class="text-xs text-slate-600">© 2024 Game Dev Portfolio. All assets property of their respective owners.</p>
+</div>
+</footer>
+</div>
+</body></html>

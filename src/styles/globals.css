@@ -1,0 +1,35 @@
+/* 全局样式 */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  /* 按钮样式 */
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-900 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  /* 卡片样式 */
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200;
+  }
+  
+  /* 导航链接 */
+  .nav-link {
+    @apply text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200;
+  }
+  
+  .nav-link.active {
+    @apply text-blue-600;
+  }
+}

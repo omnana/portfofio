@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects Showcase | GameDev Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b6cee",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .tech-grid-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(43, 108, 238, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .project-card:hover .hover-overlay {
+            opacity: 1;
+        }
+        .project-card:hover .project-image {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen tech-grid-bg">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#232f48] px-10 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 bg-primary/10 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">terminal</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight font-display">DEV.PORTFOLIO</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Home</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary pb-1" href="#">Projects</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Stack</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center bg-slate-100 dark:bg-[#232f48] rounded-lg px-3 py-1.5 border border-transparent focus-within:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-slate-400 text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-slate-500" placeholder="Search projects..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                    Hire Me
+                </button>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto w-full px-6 py-12">
+<!-- Header Section -->
+<div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<p class="text-primary font-bold tracking-[0.2em] text-xs uppercase">Deployment Log</p>
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white font-display">PROJECTS_SHOWCASE</h1>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 p-1 bg-slate-100 dark:bg-[#1a2130] rounded-xl w-fit">
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-lg bg-primary text-white px-6 transition-all shadow-md">
+<span class="text-sm font-bold">ALL</span>
+</button>
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#232f48] text-slate-600 dark:text-slate-400 px-6 transition-all">
+<span class="material-symbols-outlined text-[18px]">desktop_windows</span>
+<span class="text-sm font-medium">PC</span>
+</button>
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#232f48] text-slate-600 dark:text-slate-400 px-6 transition-all">
+<span class="material-symbols-outlined text-[18px]">smartphone</span>
+<span class="text-sm font-medium">Mobile</span>
+</button>
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-lg hover:bg-slate-200 dark:hover:bg-[#232f48] text-slate-600 dark:text-slate-400 px-6 transition-all">
+<span class="material-symbols-outlined text-[18px]">language</span>
+<span class="text-sm font-medium">Web</span>
+</button>
+</div>
+</div>
+<!-- Project Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="project-card group relative flex flex-col bg-white dark:bg-[#1a2130] rounded-xl overflow-hidden border border-slate-200 dark:border-[#232f48] hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-primary/10">
+<div class="relative aspect-video overflow-hidden">
+<div class="project-image w-full h-full bg-center bg-cover transition-transform duration-500" data-alt="Futuristic space station in a nebula environment" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClSQbN6CaQy3DSgzZ1Av5PbN95kvT6STuow5qqwaOW_mgJaod7JtLGZfrn8S_VzKE1zugtoEw-4PbfjrmnJ7PltrbbflS4KH-355eHbx8x8Qh7QqW2uZKiBSmPp4tZisl2g3IiE5oJMvVJOfwGAnsw2h-RVGk8iCMw150-4xRvs9ZULRJ1XuXMiHytUe_vrzxeGh6UZtQOyruXs-zYhMWO6GfLoOOWNrwvmo5dLtFGHwZvP4JjDuPBWKYkY2WvMRVKQBV0fWjuqQ");'></div>
+<div class="hover-overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex items-center justify-center gap-4">
+<button class="bg-white text-primary font-bold px-4 py-2 rounded-lg flex items-center gap-2 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">visibility</span> View
+                            </button>
+<button class="bg-primary-dark/20 border border-white text-white font-bold px-4 py-2 rounded-lg hover:scale-105 transition-transform">
+                                GitHub
+                            </button>
+</div>
+<div class="absolute top-3 left-3 flex gap-2">
+<span class="bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">PC</span>
+<span class="bg-primary/90 text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">New</span>
+</div>
+</div>
+<div class="p-5 space-y-3">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Project Nebula</h3>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mt-1">Action RPG</p>
+</div>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Exploration-heavy sci-fi RPG featuring procedural solar systems and real-time ship combat.</p>
+<div class="flex items-center gap-3 pt-2 border-t border-slate-100 dark:border-[#232f48]">
+<div class="flex items-center gap-1 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">data_object</span> Unity
+                            </div>
+<div class="flex items-center gap-1 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">code</span> C#
+                            </div>
+<div class="flex items-center gap-1 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">view_in_ar</span> Blender
+                            </div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="project-card group relative flex flex-col bg-white dark:bg-[#1a2130] rounded-xl overflow-hidden border border-slate-200 dark:border-[#232f48] hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-primary/10">
+<div class="relative aspect-video overflow-hidden">
+<div class="project-image w-full h-full bg-center bg-cover transition-transform duration-500" data-alt="Cyberpunk city street with neon signs" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBU8ywHAOf9wtI6idOspVDkgJvIrwXlsVHl1NIjzZa8Mojf8_AYONG1MUyVW9g-9VYeXs8HfHDUbvSNiHPQahAJ9rYrh7CtJ9eUk2shqAW41fLga6KIRj-Er-sXiPzCbbDk1bbEUziQPQ1teqn2WE-FvjTlue1Dew_fvb28hpGqXkL8atqwDn9kDiaptt9LCiY7QTObFQmq0QS_FZ_DzXucZUDNYxfQt6ELyTQEXYGkVMzrR-z7dCIy2mLm3tNZEeut9TwZTwnc4A");'></div>
+<div class="hover-overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex items-center justify-center gap-4">
+<button class="bg-white text-primary font-bold px-4 py-2 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">visibility</span> View
+                            </button>
+</div>
+<div class="absolute top-3 left-3">
+<span class="bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Mobile</span>
+</div>
+</div>
+<div class="p-5 space-y-3">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Cyber Strike</h3>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mt-1">Tactical Shooter</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Fast-paced cyberpunk squad combat with destructible environments and hacking mechanics.</p>
+<div class="flex items-center gap-3 pt-2 border-t border-slate-100 dark:border-[#232f48]">
+<div class="flex items-center gap-1 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">settings_input_component</span> Unreal
+                            </div>
+<div class="flex items-center gap-1 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">terminal</span> C++
+                            </div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="project-card group relative flex flex-col bg-white dark:bg-[#1a2130] rounded-xl overflow-hidden border border-slate-200 dark:border-[#232f48] hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-primary/10">
+<div class="relative aspect-video overflow-hidden">
+<div class="project-image w-full h-full bg-center bg-cover transition-transform duration-500" data-alt="Dark fantasy dungeon with eerie blue lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGuEDE2D4mnHsD3uXiI0eh27aoWTw0DsdlckSeqnCIT6TS2yg555022dQxbDghxdx_ysVNCyWHecSzjnRiYoFwFsG0PcFZSkiioOEtvRb26ERrmtaIfh161WpzmsbwtV746JdiyWTb6v7mNvkVmXN1VDEljwPWvc5oIGOM-GeKO57vKt8jed3P_fu-iCy1vjDwSroSzrsLTi5weMzsqgmCAyYOR4eP_kH5DbWKcQ4abm7Mx7HYBDvoj-4kcyLZVBC2ogu68OwU9Q");'></div>
+<div class="hover-overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex items-center justify-center gap-4">
+<button class="bg-white text-primary font-bold px-4 py-2 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">play_circle</span> Play
+                            </button>
+</div>
+<div class="absolute top-3 left-3">
+<span class="bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Web / WebGL</span>
+</div>
+</div>
+<div class="p-5 space-y-3">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Void Walker</h3>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mt-1">Roguelike</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">A browser-based dark fantasy roguelike with deep character customization and permanent death.</p>
+<div class="flex items-center gap-3 pt-2 border-t border-slate-100 dark:border-[#232f48]">
+<div class="flex items-center gap-1 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">javascript</span> JS
+                            </div>
+<div class="flex items-center gap-1 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">layers</span> Three.js
+                            </div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="project-card group relative flex flex-col bg-white dark:bg-[#1a2130] rounded-xl overflow-hidden border border-slate-200 dark:border-[#232f48] hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-primary/10">
+<div class="relative aspect-video overflow-hidden">
+<div class="project-image w-full h-full bg-center bg-cover transition-transform duration-500" data-alt="Giant robots battling in an industrial zone" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABPyPCx17Peh_XJ_7CTAIqWBQQW2WOUnfOIaAPG8AP9W_Vw8-0p6yoAGDP8eqJBQV4r6q1v4RlLD9ftiz-mqm9Ib4WmyJ9YPRiHXTa6hVHqSUwSdfgYu0Mzo7jOPrJQrxeNpuG8et-k9pSsP00NJj01kz0AjdeNARuaWJVVokTLt74ur1GirLZIzgfcAGXg15WJpzynZi-aFamk0d-WNIqPQy46lJ1Cy-69dC_vfYzMSv-h6SIC8ZHoo-ekE9QFZLm0vwnbJx08A");'></div>
+<div class="hover-overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex items-center justify-center gap-4">
+<button class="bg-white text-primary font-bold px-4 py-2 rounded-lg">View</button>
+</div>
+<div class="absolute top-3 left-3">
+<span class="bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">PC</span>
+</div>
+</div>
+<div class="p-5 space-y-3">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Mech Commander</h3>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mt-1">Real-time Strategy</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Large-scale RTS featuring thousands of units and complex resource management systems.</p>
+<div class="flex items-center gap-3 pt-2 border-t border-slate-100 dark:border-[#232f48]">
+<div class="flex items-center gap-1 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">data_object</span> Unity
+                            </div>
+<div class="flex items-center gap-1 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">view_in_ar</span> Blender
+                            </div>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="project-card group relative flex flex-col bg-white dark:bg-[#1a2130] rounded-xl overflow-hidden border border-slate-200 dark:border-[#232f48] hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-primary/10">
+<div class="relative aspect-video overflow-hidden">
+<div class="project-image w-full h-full bg-center bg-cover transition-transform duration-500" data-alt="Stylized character running through a neon tunnel" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5qaERNTzqSbICgBFGWNMN9eUPZb6mvGy59AQ2t6YCbQdq2AOYENiGq8YEXn69oHyjrahJ4mwu2OolgQRM3IciAxSNfPsn2hBdg7mjwMFXH3Ros1IkIK-Q0KQd3cC4dty_wLZvPlD-W5oi1WfAbkHvrJ9DVTiq5bEbnCIrXjLd5iQTBva2-j2KiMclgcUVUcOSlXlTAyQx9iJAs0XsGlEXIv3Y3uCxVD5DtEZVva0sNcGHBZxSd0vaurI1LriDGxhVgRp7N4PHiQ");'></div>
+<div class="hover-overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex items-center justify-center gap-4">
+<button class="bg-white text-primary font-bold px-4 py-2 rounded-lg">Play Demo</button>
+</div>
+<div class="absolute top-3 left-3">
+<span class="bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Web</span>
+</div>
+</div>
+<div class="p-5 space-y-3">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Star Runner</h3>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mt-1">Endless Runner</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">Hyper-casual mobile experience with global leaderboards and cosmetic unlocks.</p>
+<div class="flex items-center gap-3 pt-2 border-t border-slate-100 dark:border-[#232f48]">
+<div class="flex items-center gap-1 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">web</span> WebGL
+                            </div>
+<div class="flex items-center gap-1 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">javascript</span> JS
+                            </div>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="project-card group relative flex flex-col bg-white dark:bg-[#1a2130] rounded-xl overflow-hidden border border-slate-200 dark:border-[#232f48] hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-primary/10">
+<div class="relative aspect-video overflow-hidden">
+<div class="project-image w-full h-full bg-center bg-cover transition-transform duration-500" data-alt="Glowing crystals in a mystical forest" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRt30_bVeKm1D4RzzE7iK64CgEL0idRwgE8IV-24RsbrF01vlmT8T_nmRzEq8M_y2va8chdkTazp8w7ZFDSN9tD1nuxyt_CYNWGNZ1C-eNl73nOJM8mebLaZj2HoJN80EA2PvpvRKTS744MaNByfC7FQuXtU-KRh9a42u3E-Za3wazp-yLRkjqhaC1GUn2h2QW8TL4V5JEofw5X1PxAp5YMrkzT_ecMNea6nQEs_GgkgszNS9t60SlRP4f5n8uG0uopKWK7_f1Hw");'></div>
+<div class="hover-overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex items-center justify-center gap-4">
+<button class="bg-white text-primary font-bold px-4 py-2 rounded-lg">View Details</button>
+</div>
+<div class="absolute top-3 left-3">
+<span class="bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">Mobile</span>
+</div>
+</div>
+<div class="p-5 space-y-3">
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Crystal Quest</h3>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mt-1">Puzzle Adventure</p>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">A relaxing but challenging match-3 puzzle game with an immersive narrative world.</p>
+<div class="flex items-center gap-3 pt-2 border-t border-slate-100 dark:border-[#232f48]">
+<div class="flex items-center gap-1 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">phone_iphone</span> Native
+                            </div>
+<div class="flex items-center gap-1 text-slate-400 text-xs">
+<span class="material-symbols-outlined text-[16px]">palette</span> UI/UX
+                            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Pagination/Call to Action -->
+<div class="mt-16 text-center">
+<p class="text-slate-500 dark:text-slate-400 mb-6">Want to see more technical breakdowns?</p>
+<button class="inline-flex items-center gap-2 bg-slate-100 dark:bg-[#1a2130] hover:bg-primary hover:text-white dark:hover:bg-primary transition-all text-slate-700 dark:text-slate-300 font-bold px-8 py-4 rounded-xl border border-slate-200 dark:border-[#232f48]">
+                    Load More Assets
+                    <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-slate-200 dark:border-[#232f48] py-12 bg-background-light dark:bg-background-dark/50">
+<div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-center md:text-left space-y-2">
+<div class="flex items-center justify-center md:justify-start gap-2 text-primary font-bold">
+<span class="material-symbols-outlined">terminal</span> DEV.PORTFOLIO
+                    </div>
+<p class="text-slate-500 dark:text-slate-400 text-sm">© 2024 GameDev Portfolio. All rights reserved.</p>
+</div>
+<div class="flex gap-12">
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-[#232f48] text-slate-500 dark:text-slate-400 hover:text-primary hover:bg-primary/10 transition-all" href="#">
+<span class="material-symbols-outlined">account_tree</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-[#232f48] text-slate-500 dark:text-slate-400 hover:text-primary hover:bg-primary/10 transition-all" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-[#232f48] text-slate-500 dark:text-slate-400 hover:text-primary hover:bg-primary/10 transition-all" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

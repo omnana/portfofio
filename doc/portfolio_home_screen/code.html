@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Game Developer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b6cee",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(16, 22, 34, 0.4) 0%, rgba(16, 22, 34, 0.8) 70%, rgba(16, 22, 34, 1) 100%);
+        }
+        .glass-nav {
+            background: rgba(16, 22, 34, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+<div class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_543)">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+</g>
+<defs><clippath id="clip0_6_543"><rect fill="white" height="48" width="48"></rect></clippath></defs>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-white uppercase">GD Portfolio</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors text-white" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-white/70" href="#projects">Projects</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-white/70" href="#about">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-white/70" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/25">
+                    Hire Me
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[700px] w-full flex items-center justify-center overflow-hidden">
+<!-- Cinematic Background Image -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Cinematic high quality science fiction game environment screenshot" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0lT2RLs9yow9C-XC5q9jsjRvn-2F5B-B7_LsakFmo2mZrn3eNCxs4RvE-9jtY4Won70JqGYFCg0h2-tnP3pqvkda6EHeuixwN7IHTwJOcRmfX2HJYKc2OeY2G2FkK3fagVx_IsWIlSmXv4L5yF-maTTRNWuwg4Ac_VngYbrZ6JuDha-ARsaFubdSlkkk5f0DdIdu651KGy4ufGOnmbAjPYmQEzNDrZTJ-pVynNZU2eR2jT9tG6uH3ECwF92gE7Cvv2zM3H896Tg');">
+</div>
+<div class="absolute inset-0 hero-gradient"></div>
+<!-- Subtle grid overlay for high-tech look -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 30px 30px;"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 container mx-auto px-6 text-center">
+<div class="max-w-4xl mx-auto space-y-8">
+<div class="space-y-4">
+<p class="text-primary font-bold tracking-[0.3em] text-sm uppercase">Available for New Projects</p>
+<h1 class="text-white text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] tracking-tighter">
+                            ALEX VANCE — <span class="text-primary/90">GAME DEVELOPER</span> &amp; DESIGNER
+                        </h1>
+<p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+                            Crafting immersive worlds, high-performance game mechanics, and unforgettable interactive experiences using Unreal Engine and C++.
+                        </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+<button class="w-full sm:w-auto bg-primary text-white text-base font-bold px-10 py-4 rounded-xl transition-all hover:bg-primary/80 hover:shadow-[0_0_20px_rgba(43,108,238,0.4)] flex items-center justify-center gap-2">
+<span>View My Work</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+<button class="w-full sm:w-auto bg-white/5 border border-white/10 text-white text-base font-bold px-10 py-4 rounded-xl transition-all hover:bg-white/10 backdrop-blur-sm">
+                            About Me
+                        </button>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 text-white/30 flex flex-col items-center gap-2">
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold">Scroll</span>
+<span class="material-symbols-outlined animate-bounce">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-12 bg-background-dark border-y border-white/5">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="flex flex-col gap-2 rounded-xl p-8 bg-white/5 border border-white/5 hover:border-primary/30 transition-colors">
+<p class="text-slate-400 text-sm font-medium uppercase tracking-wider">Games Released</p>
+<p class="text-white tracking-tight text-4xl font-bold">12</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-8 bg-white/5 border border-white/5 hover:border-primary/30 transition-colors">
+<p class="text-slate-400 text-sm font-medium uppercase tracking-wider">Players Reached</p>
+<p class="text-white tracking-tight text-4xl font-bold">2.5M+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-8 bg-white/5 border border-white/5 hover:border-primary/30 transition-colors">
+<p class="text-slate-400 text-sm font-medium uppercase tracking-wider">Years Exp.</p>
+<p class="text-white tracking-tight text-4xl font-bold">8</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-8 bg-white/5 border border-white/5 hover:border-primary/30 transition-colors">
+<p class="text-slate-400 text-sm font-medium uppercase tracking-wider">Awards Won</p>
+<p class="text-white tracking-tight text-4xl font-bold">4</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Grid Section -->
+<section class="py-24 bg-background-dark" id="projects">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col items-center text-center mb-16">
+<h4 class="text-primary text-sm font-bold leading-normal tracking-[0.2em] uppercase mb-4">Portfolio Highlights</h4>
+<h2 class="text-4xl md:text-5xl font-black text-white">FEATURED PROJECTS</h2>
+<div class="w-20 h-1 bg-primary mt-6 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="group relative overflow-hidden rounded-2xl aspect-[16/10] cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Futuristic cyberpunk city skyline neon lights game world" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQVLTNwyalzOVDVo3xbLPnrblIwxhhsyTl4RpoEJ-0m_TaRxCFj2ScM6O02u0WKbHyVdfcQPZyYIvsPz8Nhe-vCzsACts__bkj_RvzdMhxaEblcivnHgJstrYEo3Rn6BiN9Q1y1Y9y6nlMtcK1EvFlzwwoGQBbSvoepdpYu0TGHtrte_rmDCxrFAXMylLbbjEQHOVQPrXR1eAoEQnRnND9tZkTKzOq0P1S3yNRuM6DHV41hk1fP9NVGIZaTFct_gn7fKxF9Bxw4Q');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-2 block">Action RPG</span>
+<h3 class="text-white text-2xl font-bold">Cyber Protocol</h3>
+<p class="text-slate-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">A high-octane neon thriller set in 2099.</p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative overflow-hidden rounded-2xl aspect-[16/10] cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Space exploration game scene with nebulas and starships" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlEGlS2KYMV587ZdhJSnqyP6azMEfckq1oNGC_cBq1h-kauzb1jk3FpuiGzQMbnZJcbRnWC3pnUbSKpfoQJZycc4brDVahTZz-ppeiL6zjcGH47fcPm8Cr3K1oOsUR8sxOoYSe0afXbBVgh6hyKDM20k5VimEswaDkZQmIpPWfXNAR3gSjcKaagLSOaIIu_pELSVgFh6JHvUn5gelhFMI-mWPEBVF9VKO299U8MeHWLoKEUBgkzSpngFcVf88SvFw17ntky-hsww');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-2 block">Simulator</span>
+<h3 class="text-white text-2xl font-bold">Nebula Drift</h3>
+<p class="text-slate-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Infinite procedural galaxy exploration.</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative overflow-hidden rounded-2xl aspect-[16/10] cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Technical engine demonstration showing particle effects and lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfEI2av4RL47HZW99QbQXc45KvZb467vWThV58E3cze1L76y8x1lsL9Q-F3mRiQG3rlaG1ZUbjGL5GlRUxeNoq_GWW-nzfjSqzGwEnh7PonMBJ5ForN-fWWIt_p4uHq0StGzA6k9jTXiw5n-_I-Dam2EKAh01sw3IbeTiCBRtYeivSeICxYcRGvitGQ7uUuWVsmXLeYA8BOoIXzb2WSZfw9SesVJGpbCDaYDfEhZMf0g7nPsgvmLhozzAHaOLsVG-uad4FyBEsGg');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform">
+<span class="text-primary text-xs font-bold uppercase tracking-widest mb-2 block">Engine Tool</span>
+<h3 class="text-white text-2xl font-bold">Shadow Engine</h3>
+<p class="text-slate-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">Optimized custom lighting system for URP.</p>
+</div>
+</div>
+</div>
+<div class="mt-16 flex justify-center">
+<button class="border border-white/20 text-white font-bold py-4 px-12 rounded-xl hover:bg-white hover:text-background-dark transition-all flex items-center gap-2">
+<span>Browse All Projects</span>
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-black border-t border-white/5 py-16">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-10">
+<div class="flex items-center gap-3">
+<div class="text-primary size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold tracking-tight text-white uppercase">Alex Vance</h2>
+</div>
+<div class="flex items-center gap-8">
+<a class="text-white/40 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+<a class="text-white/40 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">code</span></a>
+<a class="text-white/40 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+<p class="text-white/40 text-sm">© 2024 Alex Vance. All Rights Reserved.</p>
+</div>
+</footer>
+</body></html>
